@@ -1,3 +1,5 @@
 /media/
 /env/
-/__pycache__/
+__pycache__
+voxapi/__pycache__
+voxenfree/__pycache__

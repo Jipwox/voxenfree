@@ -17,6 +17,16 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls.static import static
 from voxenfree.settings import MEDIA_URL
+from voxapi import views
+
+from django.urls import include, path
+from rest_framework import routers
+
+router = routers.DefaultRouter()
+router.register(r'products', views.ProductViewSet)
+
 urlpatterns = [
+    path('', include(router.urls)),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('admin/', admin.site.urls),
 ] + static(MEDIA_URL)

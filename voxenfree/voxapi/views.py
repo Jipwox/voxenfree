@@ -2,7 +2,7 @@ from django.shortcuts import render
 from voxcore.models import Product
 from rest_framework import viewsets
 from rest_framework import permissions
-from serializers import ProductSerializer
+from voxapi.serializers import ProductSerializer
 
 
 class ProductViewSet(viewsets.ModelViewSet):
