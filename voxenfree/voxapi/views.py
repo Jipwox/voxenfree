@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from voxcore.models import Product
 from rest_framework import viewsets
-from rest_framework import permissions
+from voxapi.permissions import ProductPermission
 from voxapi.serializers import ProductSerializer
 
 
@@ -11,4 +11,4 @@ class ProductViewSet(viewsets.ModelViewSet):
     """
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
-    permission_classes = [permissions.AllowAny]
+    permission_classes = [ProductPermission]
