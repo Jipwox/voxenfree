@@ -5,4 +5,4 @@ from voxcore.models import Product
 class ProductSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Product
-        fields = ['type', 'name', 'set', 'description', 'price']
+        fields = ['type', 'name', 'set', 'description', 'price', 'stock']
