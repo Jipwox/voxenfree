@@ -1,5 +1,4 @@
 from django.db import models
-from voxenfree.settings import MEDIA_ROOT
 
 # Create your models here.
 class Product(models.Model):
@@ -9,3 +8,4 @@ class Product(models.Model):
     description = models.CharField(max_length=200)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     stock = models.IntegerField()
+    img = models.URLField()
