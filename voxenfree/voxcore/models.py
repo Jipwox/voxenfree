@@ -9,3 +9,9 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     stock = models.IntegerField()
     img = models.URLField()
+
+    def __repr__(self):
+        return f"{self.name} {self.type}"
+
+    def __str__(self):
+        return self.__repr__()
